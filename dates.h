@@ -20,7 +20,7 @@ public:
 		this->word = buffer;
 	}
 	void load_money(int buffer) {
-		this->money == buffer;
+		this->money = buffer;
 	}
 	void set_login() {
 		std::cout << "Input your login: "; std::cin >> this->login;
@@ -56,5 +56,4 @@ public:
 	int get_money() {
 		return this->money;
 	}
-
 };

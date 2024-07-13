@@ -1,5 +1,6 @@
 #pragma once
 #include "dates.h"
+#include "user.h"
 
 void login() {
 	Dates date;
@@ -17,6 +18,7 @@ void login() {
 		}
 		if (login == date.get_login() && password == date.get_password()) {
 			std::cout << "Authorization completed";
+			Application(&date);
 		}
 		else std::cout << "Incorrect login or password";
 	}

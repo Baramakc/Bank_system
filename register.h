@@ -1,5 +1,6 @@
 #pragma once
 #include "dates.h"
+#include "login.h"
 
 void registration() {
 	Dates date;
@@ -16,7 +17,8 @@ void registration() {
 	}
 	std::ofstream fail("D:\\DoProjects\\Bank_system\\Date\\" + date.get_login() + ".txt");
 	fail << date.get_login() << "\n" << date.get_password() << "\n" << date.get_word() << "0";
-
 	fail.close();
+
+	login();
 }
 // Сделать выход из регистрации
