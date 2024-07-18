@@ -5,18 +5,18 @@
 void registration() {
 	Dates date;
 	while (true) {
-		date.set_login();
-		date.set_password();
-		date.set_word();
+		date.get_login();
+		date.get_password();
+		date.get_word();
 
-		if (std::ifstream("D:\\DoProjects\\Bank_system\\Date\\" + date.get_login() + ".txt"))
+		if (std::ifstream("D:\\DoProjects\\Bank_system\\Date\\" + date.set_login() + ".txt"))
 		{
 			std::cout << "Login already exists" << std::endl;
 		}
 		else break;
 	}
-	std::ofstream fail("D:\\DoProjects\\Bank_system\\Date\\" + date.get_login() + ".txt");
-	fail << date.get_login() << "\n" << date.get_password() << "\n" << date.get_word() << "0";
+	std::ofstream fail("D:\\DoProjects\\Bank_system\\Date\\" + date.set_login() + ".txt");
+	fail << date.set_login() << "\n" << date.set_password() << "\n" << date.set_word() << "\n" << "0";
 	fail.close();
 
 	login();

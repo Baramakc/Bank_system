@@ -1,8 +1,6 @@
 #pragma once
 #include <iostream>
 #include <fstream>
-#include <string>
-#include <vector>
 
 class Dates {
 	std::string login;
@@ -22,10 +20,10 @@ public:
 	void load_money(int buffer) {
 		this->money = buffer;
 	}
-	void set_login() {
+	void get_login() {
 		std::cout << "Input your login: "; std::cin >> this->login;
 	}
-	void set_password() {
+	void get_password() {
 		while (true) {
 			std::string buffer_1, buffer_2;
 			std::cout << "Input your password: "; std::cin >> buffer_1;
@@ -37,23 +35,23 @@ public:
 			else std::cout << "Return please!\n";
 		}
 	}
-	void set_word() {
+	void get_word() {
 		std::cout << "Input your word: "; std::cin >> this->word;
 	}
 	// Доделать! set_money
-	void set_money() {
-		std::cin >> this->money;
+	void get_money(int buffer) {
+		this->money = buffer;
 	} 
-	std::string get_login() {
+	std::string set_login() {
 		return this->login;
 	}
-	std::string get_password() {
+	std::string set_password() {
 		return this->password;
 	}
-	std::string get_word() {
+	std::string set_word() {
 		return this->word;
 	}
-	int get_money() {
+	int set_money() {
 		return this->money;
 	}
 };
