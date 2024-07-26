@@ -17,7 +17,7 @@ void login() {
 			date.load_login(lLogin); date.load_password(lPassword); date.load_word(lWord); date.load_money(lMoney);
 		}
 		if (login == date.set_login() && password == date.set_password()) {
-			std::cout << "Authorization completed";
+			std::cout << "Authorization completed\n";
 			Application(&date);
 		}
 		else std::cout << "Incorrect login or password";
