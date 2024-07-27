@@ -16,7 +16,7 @@ void registration() {
 		else break;
 	}
 	std::ofstream fail("D:\\DoProjects\\Bank_system\\Date\\" + date.set_login() + ".txt");
-	fail << date.set_login() << "\n" << date.set_password() << "\n" << date.set_word() << "\n" << "0";
+	fail << date.set_login() << "\n" << date.set_password() << "\n" << date.set_word() << "\n" << "0\n"  "0\n"  << "0";
 	fail.close();
 
 	login();

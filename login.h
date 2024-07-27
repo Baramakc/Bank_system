@@ -12,9 +12,10 @@ void login() {
 	{
 		{
 			std::ifstream fail("D:\\DoProjects\\Bank_system\\Date\\" + login + ".txt");
-			std::string lLogin, lPassword, lWord; int lMoney;
-			fail >> lLogin >> lPassword >> lWord >> lMoney;
-			date.load_login(lLogin); date.load_password(lPassword); date.load_word(lWord); date.load_money(lMoney);
+			std::string lLogin, lPassword, lWord; int lMoney, lLoan, lDeposit;
+			fail >> lLogin >> lPassword >> lWord >> lMoney >> lLoan >> lDeposit;
+			date.load_login(lLogin); date.load_password(lPassword); date.load_word(lWord); 
+			date.load_money(lMoney); date.load_loan(lLoan); date.load_deposit(lDeposit);
 		}
 		if (login == date.set_login() && password == date.set_password()) {
 			std::cout << "Authorization completed\n";

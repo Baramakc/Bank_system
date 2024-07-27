@@ -7,6 +7,8 @@ class Dates {
 	std::string password;
 	std::string word;
 	int money;
+	int loan;
+	int deposit;
 public:
 	void load_login(std::string buffer) {
 		this->login = buffer;
@@ -20,6 +22,13 @@ public:
 	void load_money(int buffer) {
 		this->money = buffer;
 	}
+	void load_loan(int buffer) {
+		this->loan = buffer;
+	}
+	void load_deposit(int buffer) {
+		this->deposit = buffer;
+	}
+	// Геттерытолько при регестрации
 	void get_login() {
 		std::cout << "Input your login: "; std::cin >> this->login;
 	}
@@ -38,10 +47,8 @@ public:
 	void get_word() {
 		std::cout << "Input your word: "; std::cin >> this->word;
 	}
-	// Доделать! set_money
-	void get_money(int buffer) {
-		this->money = buffer;
-	} 
+
+
 	std::string set_login() {
 		return this->login;
 	}
@@ -54,4 +61,20 @@ public:
 	int set_money() {
 		return this->money;
 	}
+	int set_loan() {
+		return this->loan;
+	}
+	int set_deposit() {
+		return this->deposit;
+	}
 };
+
+/*
+Login
+Password
+Word
+Money
+Loan
+Deposit
+
+*/
